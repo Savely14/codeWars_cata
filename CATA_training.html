@@ -1,0 +1,908 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CATA_training</title>
+</head>
+
+<body>
+  <script>
+    // console.log() return
+
+// 7kyu Find the stray number
+// function stray(numbers) {
+//     numbers = numbers.sort()
+//     if (numbers[0] !== numbers[1]) {
+//         return numbers[0]
+//     }
+//     else {
+//         return numbers[numbers.length-1]
+//     }
+// }
+// console.log(stray([17, 17, 3, 17, 17, 17, 17]))
+
+
+
+
+
+
+
+
+//Don't give me five!  НЕ ПРОХОДИТ ВСЕ ТЕСТЫ!
+// function dontGiveMeFive(start, end) {
+// let arr = []
+// let spreadArr = []
+
+// //создаем массив с числами диапазона
+// if (start >= 0 && end > 0) {
+// for (i = start; i <= end; i++) { arr.push(i) } } else { for (i=end; i <=start; i++) { arr.push(i) } } 
+
+// //создаем вложенный массив spreadArr с разобранными числами 
+//     arr.map((item)=> {
+//     item = item.toString()
+//     spreadArr.push([...item])
+//     })
+//     //console.log(spreadArr)
+
+//     let fiveElem = []
+//     //находим во вложенном массиве все элементы с пятерками
+//     spreadArr.forEach((item) => {
+//     item.filter((innerItem) => {
+//     if (innerItem == '5') {
+//     fiveElem.push(item)
+//     }
+//     })
+//     })
+
+//     //избавляемся от дублей
+//     let res = [...new Set(fiveElem)]
+//     console.log(spreadArr)
+//     // console.log(res.length)
+//     // console.log(spreadArr.length - res.length)
+
+//     return spreadArr.length - res.length
+
+// }
+// console.log(dontGiveMeFive(4, 86))
+
+
+//Count the number of Duplicates НЕ ДОДЕЛАЛ!
+//     function duplicateCount(text){
+//         let arr = []
+//         let doubleChar = 0
+
+//         text = text.toLowerCase() //приведение к нижнему регистру
+//         text = [...text]   //разбор на элементы, приведение к массиву
+//         text = text.sort() // сортировка
+//         console.log(text)
+//         let tempVar = text[0]
+
+//         for (i = 1; i <= text.length; i++) {
+//             if (text[i] == text[i-1]) {
+//                 arr.push(text[i])
+//             }
+//         }
+//         return arr
+
+// }
+// console.log(duplicateCount("indivisibiliTy"))
+
+
+    //Find The Parity Outlier
+// function findOutlier(integers){
+//     let lastElems = integers.slice(integers.length -3, integers.length)
+//     let blackSheep
+//     let EvenOrOddArray = []     
+//     let EvenOrOddVar = 0
+//     let even = 0
+//     let odd = 0
+
+//     integers.sort((a, b) => a - b)
+
+//     for (i = 0; i < lastElems.length; i++) {
+//         (lastElems[i] % 2 === 0) ? EvenOrOddArray.push("even") : EvenOrOddArray.push("odd")
+//     }
+
+//     for (i = 0; i < EvenOrOddArray.length; i++) {
+//         (EvenOrOddArray[i] == "even") ? even += 1 : odd += 1
+//     }
+//     (even > 1) ? EvenOrOddVar = "even" : EvenOrOddVar = "odd"
+
+//     for (i = 0; i <= integers.length; i++) {
+//         if (EvenOrOddVar == "even") {
+//             integers.map((item) => {
+//                 if (item % 2 != 0) {
+//                     blackSheep = item
+//                 }
+//             })
+//         }
+//         else if (EvenOrOddVar == "odd") {
+//             integers.map((item) => {
+//                 if (item % 2 == 0) {
+//                     blackSheep = item
+//                 }
+//             })
+//         }
+        
+//     }
+//     return blackSheep
+// }
+// console.log(findOutlier([3, 5, 0, 101, 4, 11, 2602, 37]))
+
+
+
+
+
+
+
+
+
+
+// сначала надо определить, массив четных или нечетных. Взять первый, последний и предпоследний элементы и сравнить на % 2. 
+// также попробовать через переменную counter, в которую переда 
+// для элементов массива менее 1 следует написать отдельную инверсионную функцию 
+
+// написать отдельную функцию, принимающую 3 аргумента. В ней циклом создать новый массив с true-false но лучше с odd/even. 
+//Затем перебрать этот массив, и если odd > 1 то массив четный, в обратном случае - нечетный. 
+
+
+    //Testing 1-2-3
+//     var number=function(array){
+//         let arr = []
+//         let counter = 1
+//         array.map((item) => {
+//             arr.push(counter + ": " + item)
+//             counter +=1
+//         })
+//         return arr
+// }
+// console.log(number(["a", "b", "c"]))
+
+
+    //Reversed sequence
+// const reverseSeq = n => {
+//     const arr = []
+//   for (i = n; i > 0; i--) {
+//     arr.push(i)
+//   }
+//   return arr
+// };
+// console.log(reverseSeq(5))
+
+    //Sum of Digits / Digital Root
+// function digitalRoot(n) {
+//     let arr = []
+
+//     n = n.toString().split('')
+
+//     n.map((item) => {
+//         item = Number(item)
+//         arr.push(item)
+//     })
+
+//     let res = arr.reduce((a, b) => {return a + b}, 0) 
+//     return res
+
+//     function isOneDigit() {
+
+//     }
+// }
+// console.log(digitalRoot(456))
+
+    //Fake Binary
+// function fakeBin(x){
+// let arr = Array.from(String(x), Number); //строку в число
+// let res = []
+
+// arr.map((item) => {
+//   (item >= 5) ? item = 1 : item = 0
+//   res.push(item)
+// })
+
+// return res.join('')
+// }
+
+// console.log(fakeBin('45385593107843568'))
+
+
+
+
+// You only need one - Beginner
+// function check(a, x) {
+//   return a.includes(x);
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107));
+
+//Найти элемент в существующем массиве, добавить новый элемент в существующий
+// В find следует засунуть функцию а не переменную
+// function searched(element, index, array) {
+//   let varToFind = 2;
+//   let findElem = array.find((element) => {
+//     return element == varToFind
+//     console.log(element)
+//   })
+// }
+// console.log(searched([1, 2]))
+
+
+// работающий пример метода find
+// const onlyEvenElements = [2, 4, 8, 16, 32]
+// // const isOdd = (element) => {
+// //   return element  === 8;
+// //}
+// const res = onlyEvenElements.find((element) => {
+//   return element  === 8;
+// })
+// console.log(res)
+
+
+
+
+
+
+// function isPalindrome(number) {
+//   let response;
+//   let arr = [...number].reverse()
+//   arr = arr.join('')
+//   number == arr ? response = 'Palindrome!' : response = 'Sorry, not a palindrome'
+//   return response
+// }
+// console.log(isPalindrome('123'))
+
+
+
+
+
+ // задание Highest and Lowest (KATA 7)
+    // function highAndLow(numbers){
+    //     let myArr = []
+    //     let res = numbers.split(' ').sort((a, b) => b - a)
+    //     myArr.push(res[0], res[res.length-1])
+    //     return myArr.join(' ')             
+    //   }
+    // console.log(highAndLow('2 6 75 23 1 32 67'))
+
+
+//Beginner - Reduce but Grow
+// function grow(x){
+//   return x.reduce((a, b) => a * b)
+// }
+// console.log(grow([2, 2, 2, 2, 2, 2]))
+
+//const grow = x => x.reduce((a, b) => a * b);
+
+
+    //Calculate average
+//     function findAverage(array) {
+//   if (array.length != 0) {
+//     return (array.reduce((a, b) => a + b, 0)) / array.length
+//   }
+//   else {
+//     return 0
+// }
+// }
+// console.log(findAverage(([31,72,46])))
+
+
+//Invert values
+// function invert(array) {
+//    let arr = []
+//    array.map((item) => {
+//     let res = item * 2 
+//     arr.push(item - res)
+//    })
+//    return arr
+// }
+// console.log(invert([1,-2,3,-4,5]))
+
+
+
+// function maps(x){
+//   let res = []
+//   x.map((item) => {
+//     item = item * 2
+//     res.push(item)
+//   })
+//   return res
+// }
+// console.log(maps([1, 2, 3]))
+
+
+    //Simple multiplication
+// function simpleMultiplication(number) {
+//    let sum = 0;
+//   if (number % 2 == 0) {
+//       sum = number * 8
+//     }
+//   else {
+//     sum = number * 9
+//   }
+//   return sum
+// }
+// console.log(simpleMultiplication(3))
+
+
+    //Are You Playing Banjo?
+// function areYouPlayingBanjo(name) {
+//   let res = '';
+//   let arr = name.split('')
+//   if (arr[0] == 'R' || arr[0] == 'r') {
+//     res = `${name} plays banjo`
+//   }
+//   else {
+//     res = `${name} does not play banjo`
+//   }
+//   return res
+// }
+// console.log(areYouPlayingBanjo("pingo"))
+
+
+//Sum Arrays
+// function sum (numbers) {
+//   return numbers.reduce((prevValue, item) => {
+//     return prevValue + item
+//     }, 0)
+    
+    
+// };
+// console.log(sum ([1, 5.2, 4, 0, -1]))
+
+
+ // function solution(number){
+    //   let arr = []
+    //   for (i = number -1; i >=1; i--) {
+    //     arr.push(i)
+    //   }
+    //   let NNarr = arr.filter(item => item % 3 == 0 || item % 5 == 0 )
+    //   return NNarr.reduce((prevValue, item) => {
+    //     return prevValue + item
+    // }, 0)
+
+
+//MakeUpperCase
+// function makeUpperCase(str) {
+//   return str.toUpperCase()
+// }
+// console.log(makeUpperCase('hello'))
+
+//Opposites Attract
+// function lovefunc(flower1, flower2){
+//   if (flower1 % 2 == 0 && flower2 % 2 != 0 || flower1 % 2 != 0 && flower2 % 2 == 0) {
+//     return true
+//   }
+//   else {
+//     return false
+//   }
+// }
+// console.log(lovefunc(2, 2))
+
+
+//A Needle in the Haystack
+// function findNeedle(haystack) {
+//       let needle = haystack.findIndex(item => item == "needle")
+//       return console.log(`found the needle at position ${haystack.findIndex(item => item == "needle")}`)
+// }
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+
+ // function solution(number){
+    //   let arr = []
+    //   for (i = number -1; i >=1; i--) {
+    //     arr.push(i)
+    //   }
+    //   let NNarr = arr.filter(item => item % 3 == 0 || item % 5 == 0 )
+    //   return NNarr.reduce((prevValue, item) => {
+    //     return prevValue + item
+    // }, 0)
+
+    //Convert number to reversed array of digits
+//     function digitize(n) {
+//       let myStr = n.toString().split('')
+//       let myArr = myStr.reverse()
+//       myArr.map((item) => {
+//         item = parseInt(item)
+//       })
+//       return myArr
+// }
+// console.log(digitize(35231))
+
+
+//     function digitize(n) {
+//       let myStr = n.toString().split('')
+//       let myArr = myStr.reverse()
+//       let sum = [];
+//       myArr.map((item) => {
+//         item = parseInt(item)
+//         sum.push(item)
+//       })
+//       return sum
+// }
+//console.log(digitize(35231))
+
+
+    //Two to One
+// function longest(s1, s2) {
+//   let res = s1 + s2
+//   let sum = res.split('')
+//   return sum.sort().join('')
+// }
+// console.log(longest("aretheyhere", "yestheyarehere"))
+
+
+// function longest(s1, s2) {
+//   let res = s1 + s2
+//   let sum = res.split('')
+//   const findDuplicates = sum => sum.filter((item, index) => sum.indexOf(item) == index)
+//   const duplicates = findDuplicates(sum);
+//   return duplicates.sort().join('')
+// }
+// console.log(longest("aretheyhere", "yestheyarehere"))
+
+
+// function dec2bin(dec) {
+//   return (dec >>> 0).toString(2);
+// }
+// console.log(dec2bin(15)); // 1
+// console.log(dec2bin(-1)); 
+// console.log(dec2bin(256)); 
+// console.log(dec2bin(-256)); 
+
+
+
+//Abbreviate a Two Word Name
+// function abbrevName(name){
+// let nameToArr = name.split('')
+// let getIndex = name.indexOf(' ')
+// let nameFirst = nameToArr.slice(0, getIndex)
+// let nameLast = nameToArr.slice(getIndex+1, nameToArr.length)
+// return `${nameFirst[0].toUpperCase()}.${nameLast[0].toUpperCase()}`
+
+// }
+// console.log(abbrevName("patrick feeney"))
+
+//Beginner - Lost Without a Map
+// function maps(x){
+//   let res = []
+//   x.map((item) => {
+//     item = item * 2
+//     res.push(item)
+//   })
+//   return res
+// }
+// console.log(maps([1, 2, 3]))
+
+
+
+    // CATA 8, Century From Year
+    // function century(year) {
+    //   const a = toString(year)     //.split('')
+    //   return a
+    // }
+    // console.log(century(1705))
+
+    // CATA 8, задача 30, Find the smallest integer in the array
+    // class SmallestIntegerFinder {
+    //   findSmallestInt(args) {
+    //     return args+5
+    //   }
+    // }
+    // console.log(findSmallestInt(3))
+
+
+    // выполненное задание Vowel Count
+    // function getCount(item) {
+    // let arr = item.split('')
+    // let count = 0
+    // for (i = 0; i <= arr.length; i++) {
+    //     if (arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u') {
+    //         count +=1
+    //         }
+    //     }   
+    //     return count
+    // }
+    // console.log(getCount('Wewillconsider'))
+
+    // выполненное задание Disemvowel Trolls (KATA 7)
+    //   function disemvowel(str) {
+    //     const vowels = 'aeiouAEIOU'
+    //     return str.split('').filter(item => vowels.indexOf(item) == -1).join('')
+    //   }
+    //   console.log(disemvowel('We will consider'))
+
+    // задание Digit*Digit (KATA 7)
+    // function squareDigits(num){
+    //     let res = String(num)
+    //     return Number(res.split('').map((item) => {
+    //         return item * item
+    //     }).join(''))
+    //   }
+    // console.log(squareDigits(765))
+
+
+    // задание Highest and Lowest (KATA 7)
+    // function highAndLow(numbers){
+    //     let myArr = []
+    //     let res = numbers.split(' ').sort((a, b) => b - a)
+    //     myArr.push(res[0], res[res.length-1])
+    //     return myArr.join(' ')             
+    //   }
+    // console.log(highAndLow('2 6 75 23 1 32 67'))
+
+    // function descendingOrder(n){
+    //     return n.split('')
+    //   }
+    //   console.log(descendingOrder(123456789))
+
+    // задание Descending Order (KATA 7)
+    // function descendingOrder(n){
+    //     n = String(n).split('')
+    //     return Number([...n].sort((a, b) => b - a).join(''))
+    //   }
+    // console.log(descendingOrder(145263)) 
+
+    // задание Get the Middle Character (KATA 7)
+    // function getMiddle(s){
+    //     let myArr = []
+    //   if (s.length % 2 == 0) {
+    //     myArr.push(s[(s.length / 2)-1], s[((s.length / 2)-1)+1])
+    //     }
+    //   if (s.length % 2 != 0) {
+    //     myArr.push(s[Math.ceil(s.length / 2)-1])
+    //     }
+    // return myArr.join('')
+    // }
+    // console.log(getMiddle('testing'))
+
+
+
+
+    // задание Get the Mumbling (KATA 7) 
+    // function accum(s) {
+    //     let arr = []                                                                      
+    //     s.split('').map((item, index) => {
+    //         let myRep = item.repeat(index+1).toLowerCase()  
+    //         arr.push(myRep.substr(0, 1).toUpperCase(0) + myRep.substr(1))
+    //     })
+    // return arr.join('-')
+    // }
+    // console.log(accum('ZpglnRxqenU'))
+
+
+    //задание List Filtering (KATA 7) 
+    // function filter_list(l) {
+    //     return arr = l.filter(item => Number.isInteger(item) == true)
+    //   }
+    // console.log(filter_list([1, 2,'a','b', '114']))
+
+    // задание Isograms(KATA 7) 
+    // function isIsogram(str){
+    //     return str.split('').map((item, index) => {
+    //       for (i = 0; i < str.length; i++) {
+    //         if (item == str[i]) {
+    //           console.log(item)
+    //         }
+    //       }
+    //     })
+    //   }
+    //   isIsogram('moose')
+
+    // function isIsogram(str) {
+    //   let tempArr = str.split('').find((item) => {
+    //     return item == 's'
+    //   })
+    //   return console.log('not isogram')
+    // }
+    // console.log(isIsogram('moose'))
+
+    // сравнивает посимвольно - 'М' с 'М', 'О' c 'О' и т.д.
+    // function isIsogram(str) {
+    //   let count = -1
+    //   let tempArr = str.split('').find((item) => {
+    //     console.log(a)
+    //     item == str[count]
+    //     count += 1
+    //     return console.log(item, str[count])
+
+    //   })
+    // }
+    // console.log(isIsogram('moose'))
+
+
+    //Exes and Ohs
+    // function XO(str) {
+    //   str = str.toLowerCase()
+    //   const tempArr = str.split('')
+    //   const xArr = tempArr.filter(item => item == 'x') 
+    //   const oArr = tempArr.filter(item => item == 'o') 
+    //   let res
+    //   if (xArr.length == oArr.length) {
+    //     res = true
+    //   }
+    //   else {
+    //     res = false
+    //   }
+    //   return res
+
+    // }
+    // console.log(XO("xxOo"))
+
+    //Shortest Word
+    // function findShort(s){
+    //   s = s.split(' ')
+    //   const arr = s.map((item) => {
+    //     return item.length
+    //   })
+    //   const res = Math.min(...arr)
+    //   return res
+    // }
+    // console.log(findShort("return the length of the shortest word"))
+
+    // Credit Card Mask
+    // function maskify(cc) {
+    //   const hashStr = cc.split('').slice(0, cc.length -4)
+    //   const last4 = cc.slice(cc.length -4, cc.length)
+    //   const hashArr = hashStr.map((item) => {
+    //     return item = '#'
+    //   })
+    //   const res = hashArr.join('').concat(last4)
+    //   return res
+    //   console.log(res)
+    // }
+    // console.log(maskify("shortest word"))
+
+
+    //Sum of two lowest positive integers
+    // function sumTwoSmallestNumbers(numbers) { 
+    //   const arr = [...numbers].sort((a, b) => a-b).reverse()
+    //   const res = arr[arr.length-1] + arr[arr.length-2]
+    //   return res
+    // }
+    // console.log(sumTwoSmallestNumbers([14, 26, 15, 3, 10, 112]))
+
+    //Beginner Series #3 Sum of Numbers
+    // function getSum(a, b){
+    //   const arr = []
+    //   let sum = 0
+    //   if (a > b) {
+    //     for (i = a; i > b-1; i--) {
+    //       arr.push(i)
+    //     }
+    //     const sum = arr.reduce((prevValue, item) => {
+    //       return prevValue + item
+    //   }, 0)
+    //     return sum
+    //   }
+    //   else if (a < b) {
+    //     for (i = a; i != b+1; i++) {
+    //       arr.push(i)
+    //       console.log(i)
+    //     }
+    //     sum = arr.reduce((prevValue, item) => {
+    //       return prevValue + item
+    //   }, 0)
+    //     return sum
+    //   }
+    //   else {
+    //     return a
+    //   }
+    //   }
+    //   console.log(getSum(0, -1))
+
+
+    //Friend or Foe?
+    // function friend(friends){
+    //   const friendsArr = []
+    //   const arr = friends.map((item) => {
+    //     if (item.length == 4) {
+    //       friendsArr.push(item)
+    //     }
+    //   })
+    //   return friendsArr
+    // }
+    // console.log(friend(["Ryan", "Kieran", "Mark"]))
+
+
+    //Categorize New Member
+    // function openOrSenior(data){
+    //   let arr = []
+    //   data.map((item) => {
+    //     if(item[0] > 54 && item[1] > 6) {
+    //       arr.push('Senior')
+    //     }
+    //     else {
+    //       arr.push('Open')
+    //     }
+    //   })
+    //   return arr
+    // }
+    // console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+
+    //Printer Errors
+    // function printerError(s) {
+    //   let spreadS = s.split('').sort()
+    //   let slicedRes = spreadS.slice(spreadS.lastIndexOf('m') +1, spreadS.length)
+    //   let res = slicedRes.length + '/' + s.length
+    //   return res
+    //   }
+    //   console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"))
+
+    // Number of People in the Bus. 
+    // передать параметр в функцю: number(param)
+    // var number = function(busStops) {
+    //   let arrFirst = []
+    //   let arrLast = []
+    //   busStops.map((item) => {
+    //   arrFirst.push(item[0])
+    //   arrLast.push(item[1])
+    // })
+    // //console.log(arrFirst, arrLast)
+    //   let res1 = arrFirst.reduce((prevValue, item) => {
+    //   return prevValue + item
+    //   }, 0)
+    //   let res2 = arrLast.reduce((prevValue, item) => {
+    //   return prevValue + item
+    //   }, 0)
+    // return console.log(res1 - res2)
+    // }
+
+    // number([[10,0],[3,5],[5,8]])
+
+    //Odd or Even?
+    // function oddOrEven(arr) {
+    //   const res = arr.reduce((prevValue, item) => {
+    //     return prevValue + item 
+    // }, 0)
+    // return res % 2 ? "odd" : "even"
+    // }
+    // console.log(oddOrEven([]))
+
+    //Reverse words
+    // function reverseWords(str) {
+    //   const reversedArr = str.split(' ').map((item) => {
+    //     item = item.split('').reverse().join('')
+    //     return item
+    //   })
+    //   return reversedArr.join(' ')
+    // }
+    // console.log(reverseWords("This is an example!"))
+
+    //Remove the minimum
+    // function removeSmallest(numbers) {
+    //   const smallest = Math.min(...numbers)
+    //   const index = numbers.indexOf(smallest)
+    //   let newArr = [...numbers.slice(0, index), ...numbers.slice(index+1)]
+    //     return newArr
+    // }
+    // console.log(removeSmallest([33, 22, 11, 44, 11]))
+
+    //задача 23, Multiples of 3 or 5
+    // function solution(number){
+    //   let arr = []
+    //   for (i = number -1; i >=1; i--) {
+    //     arr.push(i)
+    //   }
+    //   let NNarr = arr.filter(item => item % 3 == 0 || item % 5 == 0 )
+    //   return NNarr.reduce((prevValue, item) => {
+    //     return prevValue + item
+    // }, 0)
+
+    // задача 24, Create Phone Number
+    // function createPhoneNumber(numbers){
+    //   numbers.unshift('(')
+    //   numbers.splice(4, 0, ') ')
+    //   numbers.splice(8, 0, '-')
+    //   return numbers.join('')
+
+    // }
+    // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+    // задача 25, Find the unique number
+    // function findUniq(arr) {
+    //   arr.sort((a, b) => a-b)
+    //   console.log(arr)
+    //   if (arr[0] < arr[1]) {
+    //     return arr[0]
+    //   }
+    //   else{
+    //     return arr[arr.length-1]
+    //   }
+    // }
+    // console.log(findUniq([ 10, 3, 3, 3, 3 ]))
+
+    // задача 26, Valid Phone Number
+    // function validPhoneNumber(phoneNumber){
+    //   const a = phoneNumber.split('')
+    //   if (phoneNumber.length == 14 && a[0] == '(' && a[4] == ')' && a[5] == ' ' && a[9] == '-') {
+    //     return true
+    //   }
+    //   else {
+    //     return false
+    //   }
+    // }
+    // console.log(validPhoneNumber("(098) 123 4567"))
+
+    // задача 27, Who likes it?
+    // function likes(names) {
+    //   let response
+    //   if (names.length < 1) {
+    //     response = "no one likes this"
+    //   }
+    //   else if (names.length == 1) {
+    //     response = names + " likes this"
+    //   }
+    //   else if (names.length == 2) {
+    //     response = names[0] + " and " + names[1] + " like this"
+    //   }
+    //   else if (names.length == 3) {
+    //     response = names[0] + ", " + names[1] + " and " + names[2] + " like this"
+    //   }
+    //   else if (names.length > 3) {
+    //     response = names[0] + ", " + names[1] + " and " + (names.length-2) + " others like this"
+    //   }
+    //   return response
+    // }
+    // console.log(likes(["Alex", "Jacob", "Mark", "Max"]))
+
+
+    // задача 28, Sum of Digits / Digital Root НЕ ДОДЕЛАЛ!
+    // function digitalRoot(n) {
+    // let finalSum
+    // let myFunc = num => Number(num)
+    // let Arr1 = Array.from(String(n), myFunc)    //привели строку к массиву
+
+    // let res1 = Arr1.reduce((prevValue, item) => {
+    //     return prevValue + item                       //суммировали все цифры массива
+    //  }, 0)
+    // let resToString = res1.toString()
+    // resToString.split('')
+
+    // if (resToString.length > 1) {
+    //   finalSum = resToString[0]+resToString[1]
+    // }
+    // return finalSum
+
+    // }
+    // console.log(digitalRoot(493193))
+
+
+    // function digitalRoot(n) {
+    //   let r = String(n).split('')
+    //   // let myFunc = num => Number(num)
+    //   // let Arr1 = Array.from(String(n), myFunc)    
+    //   console.log(r)
+    //   let res1 = r.reduce((prevValue, item) => {
+    //       return prevValue + item                       
+    //    }, 0)
+    //    console.log(res1)
+
+    //   let resToString = res1.toString()
+    //   let a = String(resToString).split('')
+    //   console.log(a)
+
+    //   if (resToString.length > 1) {
+    //     finalSum = resToString[0]+resToString[1]
+    //   }
+    //   return finalSum
+
+    //   }
+    //   console.log(digitalRoot(493193))
+
+    // CATA 8, задача 29, Remove String Spaces
+    // function noSpace(x) {
+    //   let arr1 = x.split('')
+    //   arr1.filter((item) => item != ' ')
+    //   return arr1.join('')
+
+    // }
+    // console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+
+    //удаляет дубли из массива. Внимание, возможно в итоге получается объект, если ошибка, то проверь.
+// const arr = [1, 2, 3, 5, 1, 6, 2, 5, 6, 7];
+// let arr_1 = [...new Set(arr)];
+// console.log(arr_1);
+  </script>
+</body>
+
+</html>

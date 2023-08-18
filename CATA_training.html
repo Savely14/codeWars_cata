@@ -9,7 +9,18 @@
 
 <body>
   <script>
-    // console.log() return
+    //7kyu Find the capitals
+    var capitals = function (word) {
+    let arr = []
+    word.split('').map((item, index) => {
+        if (item === item.toUpperCase()) {
+            arr.push(index)
+        }
+    })
+    return arr
+};
+console.log(capitals("CodEWaRs"))
+
 
     //7kyu Sort Numbers
 // function solution(nums){

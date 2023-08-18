@@ -9,6 +9,15 @@
 
 <body>
   <script>
+
+
+        // 7kyu Small enough? - Beginner
+    function smallEnough(a, limit){
+        let res = a.filter((item) => item > limit)
+        return Boolean(!res.length > 0)
+}
+console.log(smallEnough([66, 101], 200))
+    
     //7kyu Find the capitals
     var capitals = function (word) {
     let arr = []

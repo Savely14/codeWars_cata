@@ -12,6 +12,16 @@
 
 
 
+        //7kyu Summing a number's digits
+    function sumDigits(number) {
+        let digits = '1234567890'
+
+        number = number.toString().split('') //дробим входящее число на цифры
+        let myFilter = number.filter(item => item >= 0) //избавляемся от минуса если есть
+        let arr = myFilter.map(Number) //переводим массив строк в массив чисел
+        return arr.reduce((a,b) => a+b)
+}
+console.log(sumDigits(226))
     
     //7kyu Simple Fun #176: Reverse Letter
 //     function reverseLetter(str) {

@@ -9,6 +9,64 @@
 
 <body>
   <script>
+    // console.log() return
+
+// Count the number of Duplicates НЕ ДОДЕЛАЛ!
+//     function duplicateCount(text){
+//         let arr = []
+//         let doubleChar = 0
+
+//         text = text.toLowerCase() //приведение к нижнему регистру
+//         text = [...text]   //разбор на элементы, приведение к массиву
+//         text = text.sort() // сортировка
+//         console.log(text)
+//         let tempVar = text[0]
+
+//         for (i = 1; i <= text.length; i++) {
+//             if (text[i] == text[i-1]) {
+//                 arr.push(text[i])
+//             }
+//         }
+//         return arr
+
+// }
+// console.log(duplicateCount("indivisibiliTy"))
+
+
+
+//надо вернуть число символов, которые повторяются больше 1 раза (i, i, i, ) = 1 потому что i только один
+// function duplicateCount(text) {
+//     let arr = []
+//     let doubleChar = 0
+//     let myLowerCase
+//     let secondArr
+//     let thirdArr
+
+//     myLowerCase = text.toLowerCase()
+//     myLowerCase = [...myLowerCase]      
+//     secondArr = myLowerCase.filter((item, index) => myLowerCase.indexOf(item) != index) // ['a', 'b', 'b']
+//     thirdArr = secondArr.filter((item, index) => secondArr.indexOf(item) == index)
+//     return thirdArr.length
+
+// }
+//console.log(duplicateCount("aabbbcde"))
+
+//6kyu Counting Duplicates
+function duplicateCount(text) {
+    let arr1 = text.toLowerCase()
+    arr1 = [...arr1]      
+    let arr2 = arr1.filter((item, index) => arr1.indexOf(item) != index)
+    let arr3 = arr2.filter((item, index) => arr2.indexOf(item) == index)
+    return arr3.length
+}
+console.log(duplicateCount("aabbbcde"))
+
+
+
+
+
+
+
 
 //7kyu Form The Minimum
 // function minValue(values) {
@@ -31,18 +89,18 @@
 // console.log(solve('сЛово'))
 
 
-        //7kyu Summing a number's digits
-    function sumDigits(number) {
-        let digits = '1234567890'
+// 7kyu Summing a number's digits
+//         function sumDigits(number) {
+//         let digits = '1234567890'
 
-        number = number.toString().split('') //дробим входящее число на цифры
-        let myFilter = number.filter(item => item >= 0) //избавляемся от минуса если есть
-        let arr = myFilter.map(Number) //переводим массив строк в массив чисел
-        return arr.reduce((a,b) => a+b)
-}
-console.log(sumDigits(226))
-    
-    //7kyu Simple Fun #176: Reverse Letter
+//         number = number.toString().split('') //дробим входящее число на цифры
+//         let myFilter = number.filter(item => item >= 0) //избавляемся от минуса если есть
+//         let arr = myFilter.map(Number) //переводим массив строк в массив чисел
+//         return arr.reduce((a,b) => a+b)
+// }
+// console.log(sumDigits(226))
+
+//7kyu Simple Fun #176: Reverse Letter
 //     function reverseLetter(str) {
 //     let alphabet = 'abcdefghijklmnopqrstuvwxyz'
 //     let arr = []
@@ -59,27 +117,26 @@ console.log(sumDigits(226))
 // }
 // console.log(reverseLetter("ultr53o?n"))
 
-        // 7kyu Small enough? - Beginner
-    function smallEnough(a, limit){
-        let res = a.filter((item) => item > limit)
-        return Boolean(!res.length > 0)
-}
-console.log(smallEnough([66, 101], 200))
-    
-    //7kyu Find the capitals
-    var capitals = function (word) {
-    let arr = []
-    word.split('').map((item, index) => {
-        if (item === item.toUpperCase()) {
-            arr.push(index)
-        }
-    })
-    return arr
-};
-console.log(capitals("CodEWaRs"))
+// Small enough? - Beginner
+//     function smallEnough(a, limit){
+//         let res = a.filter((item) => item > limit)
+//         return Boolean(!res.length > 0)
+// }
+// console.log(smallEnough([66, 101], 200))
 
+//Find the capitals
+//     var capitals = function (word) {
+//     let arr = []
+//     word.split('').map((item, index) => {
+//         if (item === item.toUpperCase()) {
+//             arr.push(index)
+//         }
+//     })
+//     return arr
+// };
+// console.log(capitals("CodEWaRs"))
 
-    //7kyu Sort Numbers
+//Sort Numbers
 // function solution(nums){
 //     if (nums === null) {
 //         return []
@@ -94,15 +151,34 @@ console.log(capitals("CodEWaRs"))
 //     }
 // }
 
+//Find the middle element
+//     function gimme (triplet) {
+//         let sortedArr = [...triplet].sort((a, b) => a - b)
+//         return triplet.indexOf(sortedArr[1])
+// }
+// console.log(gimme([22, 32, 11]))
 
+//Make a function that does arithmetic!
+//     function arithmetic(a, b, operator){
+//         var res = {
+//     'add': function (a, b) { 
+//         return a + b 
+//     },
+//     'subtract': function (a, b) { 
+//         return a - b 
+//     },
+//     'multiply': function (a, b) { 
+//         return a * b 
+//     },
+//     'divide': function (a, b) { 
+//         return a / b 
+//     },
     
-    //7kyu Find the middle element
-    function gimme (triplet) {
-        let sortedArr = [...triplet].sort((a, b) => a - b)
-        return triplet.indexOf(sortedArr[1])
-}
-console.log(gimme([22, 32, 11]))
+//     }
+//     return res[operator](a, b)
 
+// }
+// console.log(arithmetic(1, 2, "add"))
 
 // 7kyu Find the stray number
 // function stray(numbers) {
@@ -115,13 +191,6 @@ console.log(gimme([22, 32, 11]))
 //     }
 // }
 // console.log(stray([17, 17, 3, 17, 17, 17, 17]))
-
-
-
-
-
-
-
 
 //Don't give me five!  НЕ ПРОХОДИТ ВСЕ ТЕСТЫ!
 // function dontGiveMeFive(start, end) {
@@ -161,29 +230,7 @@ console.log(gimme([22, 32, 11]))
 // console.log(dontGiveMeFive(4, 86))
 
 
-//Count the number of Duplicates НЕ ДОДЕЛАЛ!
-//     function duplicateCount(text){
-//         let arr = []
-//         let doubleChar = 0
-
-//         text = text.toLowerCase() //приведение к нижнему регистру
-//         text = [...text]   //разбор на элементы, приведение к массиву
-//         text = text.sort() // сортировка
-//         console.log(text)
-//         let tempVar = text[0]
-
-//         for (i = 1; i <= text.length; i++) {
-//             if (text[i] == text[i-1]) {
-//                 arr.push(text[i])
-//             }
-//         }
-//         return arr
-
-// }
-// console.log(duplicateCount("indivisibiliTy"))
-
-
-    //Find The Parity Outlier
+//Find The Parity Outlier
 // function findOutlier(integers){
 //     let lastElems = integers.slice(integers.length -3, integers.length)
 //     let blackSheep

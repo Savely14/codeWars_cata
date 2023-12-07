@@ -22,6 +22,14 @@
 
 
     
+
+    //7kyu Even numbers in an array
+    function evenNumbers(array, number) {
+        let arr = array.filter((item) => item %2 ==0 || item %2 == -0)
+        return arr.splice(arr.length - number, arr.length)
+}
+console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))
+    
     //7kyu Predict your age!
 function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
         let AddThemAll = 0 

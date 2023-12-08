@@ -11,18 +11,14 @@
   <script>
     // console.log() return
 
-
-
-
-
-
-
-
-
-
-
     
 
+//7kyu Bumps in the Road
+    function bump(x){
+        x = x.split('').filter(item => item === 'n').length
+        return x > 15 ? 'Car Dead' : 'Woohoo!'
+}
+    
     //7kyu Even numbers in an array
     function evenNumbers(array, number) {
         let arr = array.filter((item) => item %2 ==0 || item %2 == -0)

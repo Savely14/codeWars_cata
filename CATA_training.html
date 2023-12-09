@@ -11,6 +11,13 @@
   <script>
     // console.log() return
 
+        //7kyu Greet Me
+    var greet = function(name) {
+        name = [...name.toLowerCase()]
+        name.map((item) => name[0] = name[0].toUpperCase())
+        return `Hello ${name.join('')}!`
+};
+console.log(greet("JACK"))
     
 
 //7kyu Bumps in the Road

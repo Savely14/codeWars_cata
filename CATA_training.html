@@ -10,6 +10,21 @@
 <body>
   <script>
     // console.log() return
+    
+     //7kyu Sorted? yes? no? how?
+ function isSortedAndHow(array) {
+    if(array == [...array].sort((a,b) => a-b).join()) {
+            return "yes, ascending"
+    }
+    else if (array == [...array].sort((a,b) => a-b).reverse().join()){
+        return "yes, descending"
+    }
+    else {
+        return "no"
+    }
+}
+console.log(isSortedAndHow([1, 2, 3, 4]))
+
 
     //7kyu Sum of Minimums!
 function sumOfMinimums(arr) {

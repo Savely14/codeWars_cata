@@ -10,6 +10,19 @@
 <body>
   <script>
     // console.log() return
+
+        // Reverse a Number
+    function reverseNumber(n) {
+        if(n<0) {
+            let a = n.toString().split('').reverse()
+            let minus = n.toString().split('')[0]
+            return Number(minus + a.slice(0, a.length -1).join(''))
+        }
+        else {
+            return Number(n.toString().split('').reverse().join('')) 
+        }
+}
+console.log(reverseNumber(-123))
     
      //7kyu Sorted? yes? no? how?
  function isSortedAndHow(array) {

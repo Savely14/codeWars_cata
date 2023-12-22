@@ -11,6 +11,16 @@
   <script>
     // console.log() return
 
+        //Convert an array of strings to array of numbers
+    function toNumberArray(stringarray){
+        let res = []
+        stringarray.map((item) => {
+            item = Number(item)
+            res.push(item)
+        })
+        return res
+}
+
         // Reverse a Number
     function reverseNumber(n) {
         if(n<0) {

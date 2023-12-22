@@ -11,6 +11,17 @@
   <script>
     // console.log() return
 
+        //Divide and Conquer
+    function divCon(x){
+        let digit = 0
+        let str = 0
+        x.map(item => {
+            item === Number(item) ? digit += item : str += Number(item)
+        });
+        return digit-str
+}
+console.log(divCon([9, 3, '7', '3']))
+
         //Convert an array of strings to array of numbers
     function toNumberArray(stringarray){
         let res = []

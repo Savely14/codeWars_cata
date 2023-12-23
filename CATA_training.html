@@ -11,6 +11,16 @@
   <script>
     // console.log() return
 
+    // 7kyu Two Oldest Ages
+function twoOldestAges(ages){
+    let res = []
+    ages.sort((a,b) => a-b)
+    res.push(ages[ages.length-2])
+    res.push(ages[ages.length-1])
+    return res
+}
+console.log(twoOldestAges([1, 2, 10, 8]))
+
         //Divide and Conquer
     function divCon(x){
         let digit = 0

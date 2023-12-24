@@ -11,6 +11,14 @@
   <script>
     // console.log() return
 
+
+    
+    // 7kyu Filter the number
+var filterString = function(value) {
+    return Number(value.split('').filter(isFinite).join(''))
+}
+console.log(filterString("90e"))
+
     // 7kyu Two Oldest Ages
 function twoOldestAges(ages){
     let res = []

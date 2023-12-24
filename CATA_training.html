@@ -21,6 +21,12 @@ function twoOldestAges(ages){
 }
 console.log(twoOldestAges([1, 2, 10, 8]))
 
+    // 7kyu Simple remove duplicates
+function solve(arr) {
+    return arr.filter((item, index) => arr.lastIndexOf(item) == index)
+}
+console.log(solve([1, 1, 2, 2, 3, 3]))
+
         //Divide and Conquer
     function divCon(x){
         let digit = 0

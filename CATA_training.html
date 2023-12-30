@@ -11,6 +11,12 @@
   <script>
     // console.log() return
 
+    // 7kyu Odd-Even String Sort
+    function sortMyString(S) {
+    return `${S.split("").filter((item, index) => index % 2 == 0).join('')} ${S.split("").filter((item, index) => index % 2 != 0).join('')}` 
+}
+console.log(sortMyString("YCOLUE'VREER"))
+
     // 7kyu Sum of array singles
 // function repeats(arr){
 //     let doubles = arr.filter((item, index) => index != arr.indexOf(item))

@@ -11,6 +11,12 @@
   <script>
     // console.log() return
 
+    // 6kyu Array.diff
+function arrayDiff(a, b) {
+    return a.filter( item => !b.includes(item))
+}
+console.log(arrayDiff(["Alex", "Jacob", "Mark", "Max"],["Jacob", "Max"]))
+
     // 7kyu Spacify
 function spacify(str) {
     let res = []

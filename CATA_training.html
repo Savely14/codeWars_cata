@@ -11,6 +11,27 @@
   <script>
     // console.log() return
 
+    // 6kyu Convert string to camel case
+function toCamelCase(str){
+    let res
+    let strSplit = str.split(/\-|_/)
+
+    if (str[0] != str[0].toUpperCase()) {
+        for (i = 1; i < strSplit.length; i++) {
+        strSplit[i] = strSplit[i][0].toUpperCase() + strSplit[i].substr(1)
+        res = strSplit.join('')
+        }
+    }
+    else {
+        for (i = 0; i < strSplit.length; i++) {
+        strSplit[i] = strSplit[i][0].toUpperCase() + strSplit[i].substr(1)
+        res = strSplit.join('')
+        }
+    }
+    return res
+}
+console.log(toCamelCase("the_stealth_warrior"))
+
     // 6kyu Array.diff
 function arrayDiff(a, b) {
     return a.filter( item => !b.includes(item))

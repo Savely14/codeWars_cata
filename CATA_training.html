@@ -11,6 +11,16 @@
   <script>
     // console.log() return
 
+    // 7kyu Spacify
+function spacify(str) {
+    let res = []
+    str.split('').map((item) => {
+        res.push(item+' ')
+    })
+    return res.join('').trim()
+}
+console.log(spacify("hello world"))
+
     // 7kyu Nth Smallest Element (Array Series #4)
 // function nthSmallest(arr, pos){
 //     return arr.sort((a,b) => a-b)[pos-1]

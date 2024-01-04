@@ -11,6 +11,30 @@
   <script>
     // console.log() return
 
+    //6kyu Your order, please
+function order(words) {
+    let arr = []
+    let res = []
+    words = words.split(' ')
+
+    words.forEach((sepWord) => {
+        sepWord.split('').forEach((sepSymbol) => {
+            if (Number.isFinite(Number(sepSymbol))) {
+                arr.unshift(sepSymbol+sepWord)
+            }
+        })
+ })
+
+ arr.sort().map((item) => {
+    item = item.split('')
+    item.shift()
+    res.push(item.join(''))
+})
+
+return res.join(' ')
+}
+console.log(order("is2 Thi1s T4est 3a"))
+
     // 6kyu Convert string to camel case
 function toCamelCase(str){
     let res

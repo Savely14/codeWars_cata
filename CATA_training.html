@@ -11,6 +11,27 @@
   <script>
     // console.log() return
 
+    //6kyu Detect Pangram
+function isPangram(string) {
+    string = string.toLowerCase()
+    string = string.split('')
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    alphabet = alphabet.split('')
+    let res
+
+    for (i = 0; i < alphabet.length; i++) {
+        if (!string.includes(alphabet[i])) {
+            res = false
+            break
+        }
+        else {
+            res = true
+        }
+    }
+    return res
+}
+console.log(isPangram("This is not a pangram."))
+
     //6kyu Your order, please
 function order(words) {
     let arr = []

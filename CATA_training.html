@@ -11,6 +11,27 @@
   <script>
     // console.log() return
 
+
+
+
+    
+    //7kyu Maximum Triplet Sum 
+function maxTriSum(numbers){
+    let res = numbers.filter((item, index) => numbers.indexOf(item) == index).sort((a,b) => a-b).reverse()
+    return res[0]+res[1]+res[2]
+}
+console.log(maxTriSum([2,9,13,10,5,2,9,5]))
+    
+    // //7kyu My Language Skills
+function myLanguages(results) {
+    let res = []
+    Object.entries(results).filter(item => item[1] >= 60).sort((a,b) => a[1]-b[1]).reverse().map((item) => {
+        res.push(item[0])
+    })
+    return res
+}
+console.log(myLanguages({"Java": 10, "Ruby": 80, "Python": 65, "JS": 300, "Haskel": 3}))
+
     //6kyu Detect Pangram
 function isPangram(string) {
     string = string.toLowerCase()

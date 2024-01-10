@@ -11,8 +11,20 @@
   <script>
     // console.log() return
 
+    //6kyu Decipher this!
+function decipherThis(str) {
+    let res = []
+    str.split(' ').forEach((item) => {
+        let tempVar = item.split('').filter((item) => !Number.isFinite(Number(item)))
+        let tmp = tempVar[0]
+        tempVar[0] = tempVar[tempVar.length-1]
+        res.push(String.fromCharCode(parseInt(item)) + tempVar.splice(0, tempVar.length-1).join('') + tmp)
+        tempVar[tempVar.length-1] = tmp
+    })
+    return res.join(' ').split('undefined').join('')
+}; 
+console.log(decipherThis('72eva 97 103o 97t 116sih 97dn 115ee 104wo 121uo 100o'))
 
-    
 //7kyu Smallest value of an array
 function min(arr, toReturn) {
     return toReturn == 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr))

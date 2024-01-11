@@ -11,6 +11,19 @@
   <script>
     // console.log() return
 
+    //5kyu flatten()
+function flatten() {
+    let arr = []
+    let res = []
+  for (i=0; i <= arguments.length; i++) {
+    arr.push(arguments[i])
+  }
+  arr = arr.flat(Infinity)
+  res = arr.filter((item) => item !== undefined)
+  return res
+}
+console.log(flatten([[[[[1]]]]], ['a', [3,['b']]], null, 5, 'c'))
+
     //6kyu Decipher this!
 function decipherThis(str) {
     let res = []

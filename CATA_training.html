@@ -11,6 +11,37 @@
   <script>
     // console.log() return
 
+    
+    //5kyu Don't Drink the Water
+function separateLiquids(glass) {
+    if (glass.length == 0) {
+        return []
+    }
+    else {
+        let O = []
+        let A = []
+        let W = []
+        let H = []
+        glass.join(',').split(',').map((item) => {
+            if      (item == 'O') {O.push(item)}
+            else if (item == 'A') {A.push(item)}
+            else if (item == 'W') {W.push(item)}
+            else if (item == 'H') {H.push(item)}
+    })
+    let arr = []
+    let final = []
+    arr.push(O, A, W, H)                                                            
+    arr = arr.join(',').split(',').filter((item) => item != '')                                              
+    for (let i = 0; i < arr.length; i += glass[0].length) {
+        let piece = arr.slice(i, i + glass[0].length);
+        final.push(piece)
+        }
+    return final
+    }
+
+}
+console.log(separateLiquids([['H', 'H', 'W', 'O'],['W','W','O','W'],['H','H','O','O']]))
+
     //5kyu flatten()
 function flatten() {
     let arr = []

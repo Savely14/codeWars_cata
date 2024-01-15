@@ -11,6 +11,14 @@
   <script>
     // console.log() return
 
+    7kyu Fix My Phone Numbers!
+function isItANum(str) {
+    let arr = str.split('').filter(item => !isNaN(Number(item))).filter(item => item != ' ').join('')
+    arr[0] == 0 && arr.length == 11 ? res = arr : res = "Not a phone number"
+    return res
+}
+console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"))
+
     
     //5kyu Don't Drink the Water
 function separateLiquids(glass) {

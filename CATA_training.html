@@ -11,6 +11,13 @@
   <script>
     // console.log() return
 
+    // 7kyu Digitize
+function digitize(n) {
+    let res = n.toString().split('').map(Number)
+    return res
+}
+console.log(digitize(1230))
+
     7kyu Fix My Phone Numbers!
 function isItANum(str) {
     let arr = str.split('').filter(item => !isNaN(Number(item))).filter(item => item != ' ').join('')

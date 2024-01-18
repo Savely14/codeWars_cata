@@ -11,6 +11,21 @@
   <script>
     // console.log() return
 
+    // 7kyu All unique
+function hasUniqueChars(str){
+    let arr = []
+    let final 
+
+    str.split('').map((item, index) => {
+    if(arr.indexOf(item) != index) {
+        arr.push(item)
+    }
+    })
+    return arr.length == 0 ? final = true : final = false
+ // final
+}
+console.log(hasUniqueChars("  nAa"))
+
     // 7kyu Split In Parts
 var splitInParts = function(s, partLength){
   let res = []

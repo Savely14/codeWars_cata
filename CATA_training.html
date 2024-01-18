@@ -11,6 +11,17 @@
   <script>
     // console.log() return
 
+    // 7kyu Split In Parts
+var splitInParts = function(s, partLength){
+  let res = []
+  for (i=0; i <s.length; i+= partLength) {
+    let chunk = s.split('').splice(i, partLength)
+    res.push(chunk.join(''))
+  }
+  return res.join(' ')
+}
+console.log(splitInParts("HelloKata", 9))
+
     // 7kyu Digitize
 function digitize(n) {
     let res = n.toString().split('').map(Number)

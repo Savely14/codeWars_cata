@@ -11,6 +11,20 @@
   <script>
     // console.log() return
 
+    //8kyu OOP: Object Oriented Piracy
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft
+    this.crew = crew
+    
+    this.isWorthIt = function() {
+        return this.draft - (this.crew * 1.5) > 20
+    }
+  }
+}
+let myShip = new Ship(10, 50);
+console.log(myShip.isWorthIt())
+
    //8kyu Is n divisible by x and y?
 // function isDivisible(n, x, y) {
 //     return n % x == 0 && n % y == 0

@@ -11,6 +11,25 @@
   <script>
     // console.log() return  
 
+    //7kyu Incrementer
+function incrementer(nums) { 
+    let resArr = []
+  nums.map((item, index) => {
+    let res
+    res = item+(index+1)
+    if (res < 9) {
+        resArr.push(res)
+    }
+    else {
+        let a
+        a = res.toString().split('')
+        resArr.push(parseInt(a[a.length-1]))
+    }
+  })
+  return resArr
+}
+
+
     //8kyu Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
 function isRubyComing(list) {
     return list.some(e => e.language === 'Ruby')

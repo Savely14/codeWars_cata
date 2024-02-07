@@ -11,7 +11,12 @@
   <script>
     // console.log() return  
 
-
+//Removing Elements
+function removeEveryOther(arr){
+    let resArr = arr.filter((item, index) => index % 2 == 0)
+    return resArr
+}
+console.log(removeEveryOther( [['Goodbye'], {'Great': 'Job'}] )) 
 
 
     

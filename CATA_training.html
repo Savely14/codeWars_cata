@@ -11,6 +11,12 @@
   <script>
     // console.log() return  
 
+    //Double Char
+function doubleChar(str) {
+    return str.split('').map(item => item+item).join('')
+}
+console.log(doubleChar( "Adidas" ))
+
 //Removing Elements
 function removeEveryOther(arr){
     let resArr = arr.filter((item, index) => index % 2 == 0)

@@ -10,6 +10,9 @@
 <body>
   <script>
     // console.log() return  
+    // Get number from string
+const getNumberFromString = (s) => parseInt(s.split('').filter((item) => !isNaN(item) && item != ' ').join(''))
+console.log(getNumberFromString("hell5o wor6ld"))
 
     // A wolf in sheep's clothing
 function warnTheSheep(queue) {

@@ -11,6 +11,23 @@
   <script>
     // console.log() return  
 
+    //Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+function remove (string) {  
+    let arr = string.split('')
+    let counter = 0
+    for (i=arr.length-1; i >= 0; i--) {
+        if (arr[i] != "!") {
+            break
+        }
+        else {
+            counter++
+        }
+    }
+    arr.reverse().splice(0, counter)
+    return arr.reverse().join('')
+}
+console.log(remove("Hi!"))
+
     
 //What is between?
 function between(a, b) {

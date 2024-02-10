@@ -10,6 +10,17 @@
 <body>
   <script>
     // console.log() return  
+
+    
+//What is between?
+function between(a, b) {
+    let arr = []
+  for (i=a; i <= b; i++) {
+    arr.push(i)
+  }
+  return arr
+}
+
     // Get number from string
 const getNumberFromString = (s) => parseInt(s.split('').filter((item) => !isNaN(item) && item != ' ').join(''))
 console.log(getNumberFromString("hell5o wor6ld"))

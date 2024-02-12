@@ -11,6 +11,17 @@
   <script>
     // console.log() return  
 
+    let str = "то написать правильное окончание у слова с числительным 3 ракетка ( 1 ракетка 2 ракетка но 5 ракетка и 15 ракеток и 125 ракеток и вам нужно в автоматическом режиме 3 ракетка подставить окончание"
+function myFun() {
+    let res = str.replace(/ракетка/g, "ракеток")
+    res = res.replace(/1 ракеток/g, "1 ракетка")
+    res = res.replace(/2 ракеток/g, "2 ракетки")
+    res = res.replace(/3 ракеток/g, "3 ракетки")
+    res = res.replace(/4 ракеток/g, "4 ракетки")
+    return res
+}
+console.log(myFun(str))
+
     //Do you speak "English"?
 function spEng(sentence){
     return sentence.toLowerCase().includes("english")

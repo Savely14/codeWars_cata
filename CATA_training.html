@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+
+    //Find numbers which are divisible by given number
+function divisibleBy(numbers, divisor){
+    let res = numbers.filter(item => item % divisor == 0)
+    return res
+}
+console.log(divisibleBy([1,2,3,4,5,6], 3))
+
     
 //All Star Code Challenge #18
 function strCount(str, letter){  

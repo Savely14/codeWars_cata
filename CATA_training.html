@@ -10,6 +10,16 @@
 <body>
   <script>
     // console.log() return  
+
+    //Contamination #1 -String-
+function contamination(text, char){
+  let res
+  for (i=0; i < text.split('').length; i++) {
+    res.push(char)
+  }
+  return res.join('')
+}
+console.log(contamination("abc","z"))
     
     //Enumerable Magic #1 - True for All?
 // function all( arr, fun ){

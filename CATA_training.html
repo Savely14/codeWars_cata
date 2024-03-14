@@ -11,6 +11,13 @@
   <script>
     // console.log() return  
 
+    //Remove duplicates from list
+function distinct(a) {
+
+  return a.filter((item, index) => a.indexOf(item) == index);
+}
+console.log(distinct([1, 2, 1, 1, 3, 2]))
+
    //Is it a number?
 function isDigit(s) {
     return  s==parseFloat(s)

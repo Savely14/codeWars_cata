@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    // Regex count lowercase letters
+function lowercaseCount(str){
+    let res
+    !/[a-z]/g.test(str) ? res = 0 : res = str.match(/[a-z]/g).length
+    return res
+}
+console.log(lowercaseCount("abcABC123"))
+
     //Remove duplicates from list
 function distinct(a) {
 

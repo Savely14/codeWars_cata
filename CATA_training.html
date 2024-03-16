@@ -11,6 +11,11 @@
   <script>
     // console.log() return  
 
+    function validateCode (code) {
+    return /^1|2|3/.test(code.toString().slice(0,1)) 
+}
+console.log(validateCode (432584))
+
     // Regex count lowercase letters
 function lowercaseCount(str){
     let res

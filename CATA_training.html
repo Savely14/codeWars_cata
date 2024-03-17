@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    //Digits explosion
+function explode(s) {
+    let arr = []
+    s.split("").map((e) => {arr.push(e.repeat(+e))})
+    return arr.join('')
+}
+console.log(explode("312"))
+
     //Coding Meetup #4 - Higher-Order Functions Series - Find the first Python
 function getFirstPython(list) {
     let arr = []

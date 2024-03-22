@@ -11,6 +11,19 @@
   <script>
     // console.log() return  
 
+    //Return String of First Characters
+function makeString(s){
+    s = s.split('')
+    s.unshift(" ") 
+    s = s.join('')
+    let myReg = /\s\D/gi
+    s = s.match(myReg)
+    s = s.join('').split('')
+    return s.filter((e)=> e != " " && e != ",").join('')
+}
+console.log(makeString("sees eyes xray yoat"));
+    
+
     //Digits explosion
 function explode(s) {
     let arr = []

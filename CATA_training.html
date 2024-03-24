@@ -11,6 +11,10 @@
   <script>
     // console.log() return  
 
+    // Javascript filter - 1
+const searchNames = (logins)=> logins.filter((e)=> e[0].split("").reverse()[0] == "_")
+
+
     //Return String of First Characters
 function makeString(s){
     s = s.split('')

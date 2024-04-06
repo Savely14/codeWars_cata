@@ -11,6 +11,17 @@
   <script>
     // console.log() return  
 
+    // Password maker
+function makePassword(phrase) {
+    let arr = []
+    phrase.split(' ').map(e=> {
+        arr.push(e.substr(0,1)) 
+    })
+    let res = arr.join('').replaceAll(/[iI]/g, '1').replaceAll(/[sS]/g, '5').replaceAll(/[oO]/g, '0')
+    return res
+}
+console.log(makePassword("Ilnur Santa Oleg"));
+
     //Exclamation marks series #5: Remove all exclamation marks from the end of words
 function remove (string) {
         let arr = []

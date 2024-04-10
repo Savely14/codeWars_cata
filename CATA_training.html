@@ -11,6 +11,22 @@
   <script>
     // console.log() return  
 
+    // C.Wars
+function initials(n){
+    let arr = []
+    n.split(' ').map(e=> {
+        arr.push(e[0].toUpperCase() + e.substring(1)) 
+    })
+    
+    for (i=0; i < n.split(' ').length-1; i++) {
+        arr[i] = arr[i][0] +'.'
+    } 
+    return arr.join('')
+}
+console.log(initials("Barack hussein obama"))
+
+    
+
     // Sort and Star
 function twoSort(s) {
     s.sort()

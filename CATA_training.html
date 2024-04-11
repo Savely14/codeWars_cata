@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    // Ghostbusters (whitespace removal)
+function ghostBusters(building) {
+    let res 
+    building.match(/ /g, '') ? res = building.replace(/ /g, '') : res = "You just wanted my autograph didn't you?"
+    return res
+}
+console.log(ghostBusters("Skyscraper"))
+
     // C.Wars
 function initials(n){
     let arr = []

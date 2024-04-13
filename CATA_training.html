@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    // letters only, please!
+function removeChars(s) {
+  let arr = s.split('').filter(e=> e.match(/[a-z, A-Z]/gi)).join().replace(/,/g, '')
+  //let res = arr.join().replace(/,/g, '')
+  return arr
+}
+console.log(removeChars('my_list = ["a","b","c"]'))
+
     // Password validator
 function password(str) {
     let res

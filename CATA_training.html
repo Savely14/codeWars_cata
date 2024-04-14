@@ -11,6 +11,26 @@
   <script>
     // console.log() return  
 
+    //The Hashtag Generator
+// function generateHashtag (str) {
+//     str = str.trim().toLowerCase()
+//     switch (str.length) {
+//     case 0:
+//         return false
+//         break
+//     }
+
+//     let res = ["#"]
+//     str.split(' ').map((e) => res.push(`${e[0].toUpperCase() + e.substr(1)}`))
+//     res = res.join('')
+
+//     if (res.length > 140 || res === "" || res === " ") {
+//         return false
+//     }
+//     else {return res}
+// }
+// console.log(generateHashtag ("Codewars"))
+
     // letters only, please!
 function removeChars(s) {
   let arr = s.split('').filter(e=> e.match(/[a-z, A-Z]/gi)).join().replace(/,/g, '')

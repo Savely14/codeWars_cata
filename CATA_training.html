@@ -11,6 +11,33 @@
   <script>
     // console.log() return  
 
+    // The Hashtag Generator
+function generateHashtag(str) {
+    str = str.trim().toLowerCase()
+    switch (str.length) {
+        case 0:
+            return false
+    }
+
+    let res = []
+    let hashTag = '#'
+    str.split(' ').map((e) => {
+        if (e !== "") {
+            res.push(`${e[0].toUpperCase() + e.substr(1)}`)
+        }
+    })
+
+    res = hashTag.concat(res.join(''))
+
+    if (res.length > 140) {
+        return false
+    } 
+    else {
+        return res
+    }
+}
+console.log( generateHashtag( "a".repeat(139) ), "#A" + "a".repeat(138) )
+
     //The Hashtag Generator
 // function generateHashtag (str) {
 //     str = str.trim().toLowerCase()

@@ -11,6 +11,33 @@
   <script>
     // console.log() return  
 
+    function firstNonRepeatingLetter(s) {
+    let lowerS = s.toLowerCase().split('')
+    let duplicates = []
+    let unique = []
+    let upperLetter
+
+    if (s == "") {
+        upperLetter = ""
+    }
+
+    lowerS.map(e=> { lowerS.indexOf(e) != lowerS.lastIndexOf(e) ? duplicates.push(e) : unique.push(e) }) //находим дубли если есть
+
+    if (!unique.length) {upperLetter = ""} // проверка, не пуст ли массив уникальных
+    
+    s.split('').find((e) => {
+        if (e.toLowerCase() == unique[0]) {
+            return upperLetter = e
+        }
+    })
+    
+    return upperLetter
+}
+console.log(firstNonRepeatingLetter("stress")) 
+
+
+    
+
     // The Hashtag Generator
 function generateHashtag(str) {
     str = str.trim().toLowerCase()

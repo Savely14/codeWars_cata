@@ -10,6 +10,13 @@
 <body>
   <script>
     // console.log() return  
+    
+    // Not very secure
+function alphanumeric(string){
+    return (string.length > 0) && !/\W/g.test(string) && !/_/g.test(string)
+}
+console.log(alphanumeric("Mazinkaiser"))
+    
 
     function firstNonRepeatingLetter(s) {
     let lowerS = s.toLowerCase().split('')

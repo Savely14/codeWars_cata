@@ -10,6 +10,18 @@
 <body>
   <script>
     // console.log() return  
+    //Convert PascalCase string into snake_case
+function toUnderscore(string) {
+    if (Number(string)) {
+        return string.toString()
+    }
+    else if (string == null) {
+        return "null"
+    }
+    else {return string.split(/(?=[A-Z])/g).join(' ').replace(/ /g, '_').toLowerCase()}
+}
+console.log(toUnderscore(null))
+    
     
     // Not very secure
 function alphanumeric(string){

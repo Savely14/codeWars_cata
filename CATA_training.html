@@ -11,6 +11,29 @@
   <script>
     // console.log() return  
 
+    //The Vowel Code
+function encode(string) {
+  let wovels = " aeiou"
+let forEncode = []
+    string.split('').map(e=> {
+        !wovels.includes(e) ? forEncode.push(e) : forEncode.push( wovels.indexOf(e) )
+    })
+  return forEncode.join('').replace(/0/g, " ")
+}
+
+function decode(string) {
+  let wovels = " aeiou"
+let forDecode = []
+    string.split('').map(e=> {
+        parseFloat(e) ? forDecode.push(wovels[e]) : forDecode.push( e )
+    })
+  return forDecode.join('').replace(/0/g, " ")
+}
+console.log( encode( 'hello' ) )
+console.log( decode( 'h2ll4' ) )
+
+    
+
     //Highest Scoring Word
 // function high(x){
 //     let arr = []

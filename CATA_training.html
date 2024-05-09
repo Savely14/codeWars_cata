@@ -11,6 +11,20 @@
   <script>
     // console.log() return  
 
+    // Char Code Calculation
+function calc(x){
+    let total = []
+
+    x.split('').map(e=> {
+        total.push(e.charCodeAt())
+    })
+    total = total.join('')
+    let total2 = total.replace(/7/g, 1)
+
+    return total.split('').reduce((a,b)=> +a + +b) - total2.split('').reduce((a,b)=> +a + +b)
+}
+console.log( calc( "abcdef" ) )
+
     //The Vowel Code
 function encode(string) {
   let wovels = " aeiou"

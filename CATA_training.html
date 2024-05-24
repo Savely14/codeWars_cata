@@ -11,6 +11,12 @@
   <script>
     // console.log() return  
 
+    // Break camelCase
+function solution(string) {
+    return /[A-Z]/g.test(string) ? res = string.split(/(?=[A-Z])/g).join(' ').replace(/ /g, ' ') : res = string
+}
+console.log( solution("camelCasing") )
+
     //Stop gninnipS My sdroW!
 // function spinWords(string){
 //     let res = []

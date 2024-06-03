@@ -11,6 +11,17 @@
   <script>
     // console.log() return  
 
+    //Numbers to Letters
+// function switcher(x){
+//     let res = []
+//     let alphabet = ' zyxwvutsrqponmlkjihgfedcba!? '
+//     for (i=0; i < x.length; i++) {
+//         res.push( alphabet.charAt( parseInt(x[i]) ))
+//     } 
+//     return res.join('')
+// }
+// console.log( switcher( ['24', '12', '23', '22', '4', '26', '9', '8'] ) )
+
     // Break camelCase
 function solution(string) {
     return /[A-Z]/g.test(string) ? res = string.split(/(?=[A-Z])/g).join(' ').replace(/ /g, ' ') : res = string

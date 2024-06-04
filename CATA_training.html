@@ -11,6 +11,21 @@
   <script>
     // console.log() return  
 
+    //Is there a vowel in there?
+    function isVow(a){
+  let vowel = 'aeiou'
+
+  for (i=0; i < a.length; i++) {
+    if (vowel.includes(String.fromCharCode(parseInt(a[i])) ) ) {
+        a.splice(i, 1, String.fromCharCode(parseInt(a[i])))
+    }
+  }
+return a
+}
+console.log( isVow([118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106]) )
+
+    
+
     // Holiday III - Fire on the boat
 function fireFight(s){
     return s.replace(/Fire/g, '~~')

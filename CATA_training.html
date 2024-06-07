@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    // Double Sort
+function dbSort(a){
+    let strings = a.filter(e=> typeof e === 'string' )
+    let integers = a.filter(e=> typeof e === 'number' )
+    return a.filter(e=> typeof e === 'string' ).sort((a, b) => a-b).concat(strings.sort()) 
+}
+console.log( dbSort( ["Banana", "Orange", "Apple", "Mango", 0, 3, 2] ) )
+
     //Is there a vowel in there?
     function isVow(a){
   let vowel = 'aeiou'

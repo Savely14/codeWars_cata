@@ -11,6 +11,17 @@
   <script>
     // console.log() return  
 
+    function gordon(a){
+    let res = a.replace(/[a-z]/g, function(letter) {
+        return letter.toUpperCase()
+    })
+    res = res.replace(/[a,A]/g, "@")
+    res = res.replace(/[a,e,i,o,u,A,E,I,O,U]/g, "*")
+    res = res.replace(/[ ]/g, "!!!! ")
+    return res.concat('!!!!')
+}
+
+
     // Double Sort
 function dbSort(a){
     let strings = a.filter(e=> typeof e === 'string' )

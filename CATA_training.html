@@ -11,16 +11,28 @@
   <script>
     // console.log() return  
 
-    // Hells Kitchen
-    function gordon(a){
-    let res = a.replace(/[a-z]/g, function(letter) {
-        return letter.toUpperCase()
-    })
-    res = res.replace(/[a,A]/g, "@")
-    res = res.replace(/[a,e,i,o,u,A,E,I,O,U]/g, "*")
-    res = res.replace(/[ ]/g, "!!!! ")
-    return res.concat('!!!!')
-}
+    // Multiply Word in String
+// function modifyMultiply (str,loc,num) {
+//     let res = []
+//     let word = str.split(' ')[loc]
+//     for (i=0; i < num-1; i++) {
+//         res.push(word + "-")
+//     }
+//     return res.join('').concat(word)
+// } 
+// console.log( modifyMultiply ( "This is a string",3 ,5 ) )
+    
+
+// Multiply Word in String
+function modifyMultiply (str,loc,num) {
+    let res = []
+    let word = str.split(' ')[loc]
+    for (i=0; i < num-1; i++) {
+        res.push(word + "-")
+    }
+    return res.join('').concat(word)
+} 
+console.log( modifyMultiply ( "This is a string",3 ,5 ) )
 
 
     // Double Sort

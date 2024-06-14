@@ -11,6 +11,20 @@
   <script>
     // console.log() return  
 
+    //Numbers to Objects 
+function numObj(s){
+    let res = []
+    let obj = {}
+    for (i=0; i < s.length; i++) {
+        let key = s[i].toString()
+        obj[key] = String.fromCharCode(s[i])
+        res.push(obj)
+        obj = {}
+    }
+    return res 
+}
+console.log( numObj( [118,117,120] ) )
+
     //Return a string's even characters.
 // function evenChars(string) {
 //     let res = []

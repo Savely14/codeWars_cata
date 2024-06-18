@@ -11,6 +11,16 @@
   <script>
     // console.log() return  
 
+    // The Office III - Broken Photocopier
+function broken(x){
+    let res = []
+    x.split('').map(e=> {
+        e == "1" ? res.push(0) : res.push(1)
+     })
+    return res.join('')
+}
+console.log( broken( "10000000101101111110011001000" ) )
+
     function countWins(winnerList, country) {
 //   counter = 0
 //   winnerList.forEach((e)=> {

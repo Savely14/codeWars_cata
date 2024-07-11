@@ -11,6 +11,29 @@
   <script>
     // console.log() return  
 
+    // Slaphead
+function bald(x){
+    let greeting = ""
+    let counter = x.split('').filter(item => item == "/")
+    console.log(counter.length);
+    if (counter.length == 0) {
+        greeting = "Clean!"
+    }
+    else if (counter.length == 1) {greeting = "Unicorn!"}
+    else if (counter.length == 2) {greeting = "Homer!"}
+    else if (counter.length > 2 && counter.length < 6) {greeting = "Careless!"}
+    else if (counter.length > 5) {greeting = "Hobo!"}
+
+    let shaver = x.replace(/\//g, "-")
+    let res = []
+    res.push(shaver)
+    res.push(greeting)
+    return res
+}
+console.log( bald("-/---/-----//--/---") )
+
+    
+
     // The Office III - Broken Photocopier
 function broken(x){
     let res = []

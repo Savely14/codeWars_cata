@@ -11,6 +11,26 @@
   <script>
     // console.log() return  
 
+    //Holiday VII - Local Talk
+function pak(s){
+    const regExp = /\S/g
+    console.log(!regExp.test(s))
+    if ( !regExp.test(s) ||  Boolean(parseFloat(s)) ) {     // в строке нет символов
+        return ""
+    }
+    else {
+        s = s.split(' ')
+        let res = [s[0]]
+        for (i=1; i < s.length; i++) {
+            res.push("pak", s[i])
+        }
+    return res.join(' ') 
+    }
+}
+console.log(pak( '    ' ))
+
+    
+
     // Slaphead
 function bald(x){
     let greeting = ""

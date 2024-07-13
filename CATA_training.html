@@ -11,6 +11,31 @@
   <script>
     // console.log() return  
 
+    // Jenny the youngest detective
+function missingWord(nums, str) {
+    str = str.toLowerCase()
+    let res = []
+    nums = nums.sort((a, b) => a - b)
+    
+    noSpaceStr = str.split('').filter(e=> e != " ")
+
+    for (i=0; i < nums.length; i++) {
+        if (nums[i] > noSpaceStr.length) {
+            res = "No mission today"
+            break
+        }
+    }
+
+
+     for (i=0; i < nums.length; i++) {
+
+         res.unshift(noSpaceStr[nums[i]])
+     }
+     res = res.reverse().join('')
+    return res
+}
+console.log( missingWord([29, 31, 8], "The quick brown fox jumps over the lazy dog") )
+
     //Holiday VII - Local Talk
 function pak(s){
     const regExp = /\S/g

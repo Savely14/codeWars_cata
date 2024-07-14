@@ -11,6 +11,18 @@
   <script>
     // console.log() return  
 
+    // Alphabetical Sequence
+function alphaSeq (str) {
+    let res = []
+    let sorted = str.toLowerCase().split('').sort()
+    
+    sorted.map(e=> {
+        res.push(e[0].toUpperCase()+e.repeat(e.charCodeAt()-97) )
+    })
+    return res.join(',')
+}
+console.log( alphaSeq ("ZpglnRxqenU") )
+
     //Lowercase strings in array
 function arrayLowerCase(arr) {
     res = []

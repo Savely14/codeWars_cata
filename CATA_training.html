@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    //Lowercase strings in array
+function arrayLowerCase(arr) {
+    res = []
+    arr.map(e=> { typeof e == 'string' ? res.push(e.toLowerCase()) : res.push(e)} )
+    return res
+}
+console.log( arrayLowerCase(['Red', 'Green']) )
+
     // Jenny the youngest detective
 function missingWord(nums, str) {
     str = str.toLowerCase()

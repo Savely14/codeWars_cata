@@ -11,6 +11,18 @@
   <script>
     // console.log() return  
 
+    //Alan Partridge III - London
+    function alan(x){
+    let check = ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway']
+    let res = []
+    let final 
+    for (i=0; i < check.length; i++) {
+        x.includes(check[i]) ? res.push(true) : res.push(false)
+    }
+    res.some(e=> e == false) ? final = 'No, seriously, run. You will miss it.' : final = 'Smell my cheese you mother!'
+    return final
+}
+
     // Alphabetical Sequence
 function alphaSeq (str) {
     let res = []

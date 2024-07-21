@@ -11,6 +11,14 @@
   <script>
     // console.log() return  
 
+    //Dinner Plans
+function commonGround(s1, s2){
+    let result = s1.split(' ').filter(e=> s2.split(' ').includes(e))
+    result.length != 0 ? result = result.reverse().filter((item, index)=> result.indexOf(item) == index ).reverse().join(' ') : result = 'death'
+    return result  
+}
+console.log( commonGround( "i like turtles", "what are you talking about" ))
+
     //Order of weight
 function arrange(arr){
     let g = arr.filter(e=> !e.includes('K') && !e.includes('T')).sort((a, b) => {

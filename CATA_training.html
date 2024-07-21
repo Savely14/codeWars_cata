@@ -11,6 +11,52 @@
   <script>
     // console.log() return  
 
+    //Order of weight
+function arrange(arr){
+    let g = arr.filter(e=> !e.includes('K') && !e.includes('T')).sort((a, b) => {
+        const numA = parseInt(a);
+        const numB = parseInt(b);
+
+        if (numA < numB) {
+        return -1;
+        }
+        if (numA > numB) {
+        return 1;
+        }
+        return 0;
+        });
+        
+    let k = arr.filter(e=> e.includes('K')).sort((a, b) => {
+        const numA = parseInt(a);
+        const numB = parseInt(b);
+
+        if (numA < numB) {
+        return -1;
+        }
+        if (numA > numB) {
+        return 1;
+        }
+        return 0;
+        });
+
+    let t = arr.filter(e=> e.includes('T')).sort((a, b) => {
+        const numA = parseInt(a);
+        const numB = parseInt(b);
+
+        if (numA < numB) {
+        return -1;
+        }
+        if (numA > numB) {
+        return 1;
+        }
+        return 0;
+        });
+    let res = g.concat(k).concat(t)
+    return res
+}
+console.log( arrange( ["1G","2KG","3T","100KG"] ) )
+    
+
     //Alan Partridge III - London
     function alan(x){
     let check = ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway']

@@ -11,6 +11,42 @@
   <script>
     // console.log() return  
 
+    //Authenticate a list of usernames
+function authList(arr) {
+    let checkArr = []
+    let res
+
+    arr.map(e=>{
+
+        if (e.length > 5 || e.length < 11 ) {
+            checkArr.push(true)
+        }
+        else {checkArr.push(false)}
+
+        if (/[a-z]/g.test(e)) {
+            checkArr.push(true)
+        }
+        else {checkArr.push(false)}
+
+        if ( /[0-9]/g.test(e) ) {
+            checkArr.push(true)
+        }
+        else {checkArr.push(false)}
+
+        if ( /[^a-z0-9]/g.test(e) ) {
+            checkArr.push(false)
+        }
+        else {checkArr.push(true)}
+
+
+    })
+    if (checkArr.includes(false)) {
+        res = false
+    }
+    else {res = true}
+    return res
+}
+
     //Dinner Plans
 function commonGround(s1, s2){
     let result = s1.split(' ').filter(e=> s2.split(' ').includes(e))

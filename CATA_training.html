@@ -9,70 +9,89 @@
 
 <body>
   <script>
-    // console.log() return  
+    // console.log(  ) return  
+
+    //Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+//     function findOddNames(list) {
+//         function sum(args) {
+//             counter = 0
+//             args.split('').map(e=> {counter += e.charCodeAt()})
+//             return counter
+//         }
+//         return list.filter(e=> sum(e.firstName) %2 != 0 )
+// }
+// console.log( findOddNames( [
+//   { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
+//   { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
+// ] ) )
+
+
+
+
+// function sum(args) {
+//     //counter = 0
+//     let res = []
+//     args.split('').map(e=> {res.push(e.charCodeAt()) })
+//     args.split('').map(e=> {counter += e.charCodeAt()})
+//   return res
+// }
+
+// console.log( sum('Abb') )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //Coding Meetup #14 - Higher-Order Functions Series - Order the food объекты
-    function orderFood(list) {
-        let mealObj = {'standard': 0, 'vegetarian': 0, 'vegan': 0, 'diabetic': 0, 'gluten-intolerant': 0, }
-        list.map(objItem=> {
-            if (objItem.meal === 'standard') {
-                mealObj.standard += 1
-            }
-            else if (objItem.meal === 'vegetarian') {
-                mealObj.vegetarian += 1
-            }
-            else if (objItem.meal === 'vegan') {
-                mealObj.vegan += 1
-            }
-            else if (objItem.meal === 'diabetic') {
-                mealObj.diabetic += 1
-            }
-            else if (objItem.meal == 'gluten-intolerant') {
-                mealObj['gluten-intolerant'] += 1
-            }
-        })
-        for (let key in mealObj ) {
-            if (mealObj[key] == 0) {
-                delete mealObj[key]    
-            }
+//     function orderFood(list) {
+//         let mealObj = {'standard': 0, 'vegetarian': 0, 'vegan': 0, 'diabetic': 0, 'gluten-intolerant': 0, }
+//         list.map(objItem=> {
+//             if (objItem.meal === 'standard') {
+//                 mealObj.standard += 1
+//             }
+//             else if (objItem.meal === 'vegetarian') {
+//                 mealObj.vegetarian += 1
+//             }
+//             else if (objItem.meal === 'vegan') {
+//                 mealObj.vegan += 1
+//             }
+//             else if (objItem.meal === 'diabetic') {
+//                 mealObj.diabetic += 1
+//             }
+//             else if (objItem.meal == 'gluten-intolerant') {
+//                 mealObj['gluten-intolerant'] += 1
+//             }
+//         })
+//         for (let key in mealObj ) {
+//             if (mealObj[key] == 0) {
+//                 delete mealObj[key]    
+//             }
             
-        }
-        return mealObj
+//         }
+//         return mealObj
 
-}
-console.log(orderFood( [
-  { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
-    meal: 'gluten-intolerant' },
-  { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript', 
-    meal: 'diabetic' },
-  { firstName: 'Ramona', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby', 
-    meal: 'vegan' },
-  { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C', 
-    meal: 'vegetarian' },
-] ))
-
-
-// 'standard', 'vegetarian', 'vegan', 'diabetic', 'gluten-intolerant'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// }
+// console.log(orderFood( [
+//   { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
+//     meal: 'gluten-intolerant' },
+//   { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript', 
+//     meal: 'diabetic' },
+//   { firstName: 'Ramona', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby', 
+//     meal: 'vegan' },
+//   { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C', 
+//     meal: 'vegetarian' },
+// ] ))
 
     //Coding Meetup #11 - Higher-Order Functions Series - Find the average age
 // function getAverageAge(list) {

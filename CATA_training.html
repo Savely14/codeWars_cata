@@ -9,93 +9,99 @@
 
 <body>
   <script>
-    // console.log(  ) return  
+// console.log(  ) 
 
-    // Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
-//     function askForMissingDetails(list) {
-//         let res = []
-//         list.map((e)=> {
-//             for (key in e) {
-//                 if (e[key] === null) {
-//                     e.question = `Hi, could you please provide your ${key}.`
-//                     res.push(e)
-//                 } 
-//             }
-//         })
-//         return res
-//     }
-// console.log( askForMissingDetails( [
-//   { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
-//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-// ] ) )
+//Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+function findSenior(list) {
+    let age = 0
+    let res = []
+    list.forEach((obj)=> {
+    if (obj.age > age) {
+        age = obj.age
+    }
 
+  })
+  list.forEach((obj)=> {
+        if (obj.age == age) {
+            res.push(obj)
+        }
+    })
+  return res
+}
+console.log( findSenior( [
+  { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
+  { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
+  { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
+  { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
+] ) )
 
+ 
+	//     //7kyu Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+// // function greetDevelopers(list) {
+// //     list.forEach((item) => {
+// //         item.greeting = `Hi ${item.firstName}, what do you like the most about ${item.language}?`
+// //   })
+// //   return list
 
+// // }
+// // console.log(greetDevelopers([
+// //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+// //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+// //   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// // ]))
 
+//     //8kyu Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+// function isRubyComing(list) {
+//     return list.some(e => e.language === 'Ruby')
+// }
+// console.log(isRubyComing([
+//   { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
+//   { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
+//   { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
+// ]))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
-//     function findOddNames(list) {
-//         function sum(args) {
-//             counter = 0
-//             args.split('').map(e=> {counter += e.charCodeAt()})
-//             return counter
+//     //Coding Meetup #4 - Higher-Order Functions Series - Find the first Python
+// function getFirstPython(list) {
+//     let arr = []
+//     list.forEach((e) => {
+//         if (e.language == 'Python') {
+//             arr.push(e.firstName +", "+ e.country)
 //         }
-//         return list.filter(e=> sum(e.firstName) %2 != 0 )
+//     })
+//     if (arr.length < 1) {
+//         arr.push("There will be no Python developers")
+//     }
+//     return arr[0]
 // }
-// console.log( findOddNames( [
-//   { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
-//   { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
-// ] ) )
+// console.log(getFirstPython([{ firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
+//   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
+//   { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }]));
 
-// function sum(args) {
-//     //counter = 0
-//     let res = []
-//     args.split('').map(e=> {res.push(e.charCodeAt()) })
-//     args.split('').map(e=> {counter += e.charCodeAt()})
-//   return res
+    // Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
+// function isSameLanguage(list) {
+//     let res = []                                                        
+
+//   list.forEach(e=> {
+//     res.push(e.language)
+//   }) 
+//   return res.every((e)=> e == res[0])    
 // }
+// console.log( isSameLanguage([
+//   { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+//   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+//   { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+// ]) )
 
-// console.log( sum('Abb') )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+// function getAverageAge(list) {
+//     let res
+//     ages.length > 1 ? res = Math.round( list.map(e=> e.age).reduce((a,b)=> a+b,0) / ages.length ) : res = list[0].age
+//     return res
+// }
+// console.log( getAverageAge( [
+//   { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 30, language: 'Java' },
+//   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 70, language: 'Python' },
+// ] ) ) 
 
     //Coding Meetup #14 - Higher-Order Functions Series - Order the food объекты
 //     function orderFood(list) {
@@ -137,34 +143,48 @@
 //     meal: 'vegetarian' },
 // ] ))
 
-    //Coding Meetup #11 - Higher-Order Functions Series - Find the average age
-// function getAverageAge(list) {
-//     let res
-//     ages.length > 1 ? res = Math.round( list.map(e=> e.age).reduce((a,b)=> a+b,0) / ages.length ) : res = list[0].age
-//     return res
+    //Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+//     function findOddNames(list) {
+//         function sum(args) {
+//             counter = 0
+//             args.split('').map(e=> {counter += e.charCodeAt()})
+//             return counter
+//         }
+//         return list.filter(e=> sum(e.firstName) %2 != 0 )
 // }
-// console.log( getAverageAge( [
-//   { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 30, language: 'Java' },
-//   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 70, language: 'Python' },
-// ] ) ) 
+// console.log( findOddNames( [
+//   { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
+//   { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
+// ] ) )
 
-
-    // Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
-// function isSameLanguage(list) {
-//     let res = []                                                        
-
-//   list.forEach(e=> {
-//     res.push(e.language)
-//   }) 
-//   return res.every((e)=> e == res[0])    
+// function sum(args) {
+//     //counter = 0
+//     let res = []
+//     args.split('').map(e=> {res.push(e.charCodeAt()) })
+//     args.split('').map(e=> {counter += e.charCodeAt()})
+//   return res
 // }
-// console.log( isSameLanguage([
-//   { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
-//   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
-//   { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
-// ]) )
 
-    
+// console.log( sum('Abb') )
+
+    // Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
+//     function askForMissingDetails(list) {
+//         let res = []
+//         list.map((e)=> {
+//             for (key in e) {
+//                 if (e[key] === null) {
+//                     e.question = `Hi, could you please provide your ${key}.`
+//                     res.push(e)
+//                 } 
+//             }
+//         })
+//         return res
+//     }
+// console.log( askForMissingDetails( [
+//   { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ] ) )
 
     //Authenticate a list of usernames
 // function authList(arr) {
@@ -931,23 +951,6 @@
 //     return arr.join('')
 // }
 // console.log(explode("312"))
-
-//     //Coding Meetup #4 - Higher-Order Functions Series - Find the first Python
-// function getFirstPython(list) {
-//     let arr = []
-//     list.forEach((e) => {
-//         if (e.language == 'Python') {
-//             arr.push(e.firstName +", "+ e.country)
-//         }
-//     })
-//     if (arr.length < 1) {
-//         arr.push("There will be no Python developers")
-//     }
-//     return arr[0]
-// }
-// console.log(getFirstPython([{ firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
-//   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
-//   { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }]));
     
 
 //     function validateCode (code) {
@@ -1266,19 +1269,6 @@
 // // }
 // // console.log(fixTheMeerkat(["tail", "body", "head"]))
 
-//     //7kyu Coding Meetup #2 - Higher-Order Functions Series - Greet developers
-// // function greetDevelopers(list) {
-// //     list.forEach((item) => {
-// //         item.greeting = `Hi ${item.firstName}, what do you like the most about ${item.language}?`
-// //   })
-// //   return list
-
-// // }
-// // console.log(greetDevelopers([
-// //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-// //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-// //   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-// // ]))
 
 //     //7kyu Incrementer
 // function incrementer(nums) { 
@@ -1298,16 +1288,6 @@
 //   return resArr
 // }
 
-
-//     //8kyu Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
-// function isRubyComing(list) {
-//     return list.some(e => e.language === 'Ruby')
-// }
-// console.log(isRubyComing([
-//   { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
-//   { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
-//   { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
-// ]))
 
 //     //8kyu Sentence Smash
 // // function smash (words) {

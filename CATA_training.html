@@ -9,16 +9,62 @@
 
 <body>
   <script>
-// console.log(  ) 
+// console.log(  ) .join('')
 
 // Dashatize it
-function dashatize(num) {
-    num.split('').map(e=> {
-        console.log( e )
-    })
-  
-}
-console.log( dashatize(274) ) 
+// function dashatize(num) {
+//     num = num.toString().split('')
+//     if (num[0] == "-") {
+//         num.splice(0, 1, '')
+//     }
+
+//     if (num[num.length] == "-") {
+//         num.splice(num.length, 1, '')
+//     }
+
+//     for (i = 0; i < num.length; i++) {
+//         if (num[i] %2 != 0) {
+//             num.splice(i, 1, "-" + num[i] + "-" )
+//         }
+//     }
+//     num = num.join('').toString()
+//     num = num.split('')
+    
+//     for (i = 0; i < num.length; i++) {
+//         if (num[i] == '-' && num[i+1] == '-') {
+//             num[i] = num[i].replace(/-/g, '')
+//         }
+//     }
+//     num
+
+//     if (num[num.length-1] == "-") {
+//         num.splice(num.length-1, 1, '')
+//     }
+
+//     if (num[0] == "-") {
+//         num.splice(0, 1, '')
+//     }
+//     return num.join('').trim()
+// }
+// console.log( dashatize(5311) ) 
+
+
+
+//     let res = str.replace(/ракетка/g, "ракеток")
+//     res = res.replace(/1 ракеток/g, "1 ракетка")
+//     res = res.replace(/2 ракеток/g, "2 ракетки")
+//     res = res.replace(/3 ракеток/g, "3 ракетки")
+//     res = res.replace(/4 ракеток/g, "4 ракетки")
+
+
+
+
+
+
+
+
+
+
 
 //Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
 // function findSenior(list) {

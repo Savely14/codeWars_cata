@@ -11,29 +11,38 @@
   <script>
 // console.log(  ) 
 
-//Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
-function findSenior(list) {
-    let age = 0
-    let res = []
-    list.forEach((obj)=> {
-    if (obj.age > age) {
-        age = obj.age
-    }
-
-  })
-  list.forEach((obj)=> {
-        if (obj.age == age) {
-            res.push(obj)
-        }
+// Dashatize it
+function dashatize(num) {
+    num.split('').map(e=> {
+        console.log( e )
     })
-  return res
+  
 }
-console.log( findSenior( [
-  { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
-  { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
-  { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
-  { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
-] ) )
+console.log( dashatize(274) ) 
+
+//Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+// function findSenior(list) {
+//     let age = 0
+//     let res = []
+//     list.forEach((obj)=> {
+//     if (obj.age > age) {
+//         age = obj.age
+//     }
+
+//   })
+//   list.forEach((obj)=> {
+//         if (obj.age == age) {
+//             res.push(obj)
+//         }
+//     })
+//   return res
+// }
+// console.log( findSenior( [
+//   { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
+//   { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
+//   { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
+//   { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
+// ] ) )
 
  
 	//     //7kyu Coding Meetup #2 - Higher-Order Functions Series - Greet developers
